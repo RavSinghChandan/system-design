@@ -5,14 +5,17 @@ import decorator.decorators.CoffeeDecorator;
 
 public class MilkDecorator extends CoffeeDecorator {
 
-    public MilkDecorator(Coffee decoratedCoffee) {
-        super(decoratedCoffee);
+    public MilkDecorator(Coffee simpelCoffee) {
+        super(simpelCoffee);
     }
 
+    @Override
     public double cost(){
-        return    decoratedCoffee.cost()+100;
+        return    simpleCoffee.cost()+200;
     }
+
+    @Override
     public String ingredients(){
-        return decoratedCoffee.ingredients()+ "Milk";
+        return simpleCoffee.ingredients()+ "Milk";
     }
 }

@@ -12,8 +12,9 @@ public class Client {
         System.out.println("Ingredients: " + coffee.ingredients() + " | Cost: $" + coffee.cost());
 
         Coffee milk = new MilkDecorator(coffee);
+        System.out.println("Ingredients: " + milk.ingredients() + " | Cost: $" + milk.cost());
         Coffee sugar = new SugarDecorator(coffee);
-        System.out.println("Ingredients: " + coffee.ingredients() + " | Cost: $" + coffee.cost());
+        System.out.println("Ingredients: " + sugar.ingredients() + " | Cost: $" + sugar.cost());
 
     }
 }

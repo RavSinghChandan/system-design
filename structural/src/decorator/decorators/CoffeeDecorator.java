@@ -3,16 +3,16 @@ package decorator.decorators;
 import decorator.component.Coffee;
 
 public abstract class CoffeeDecorator implements Coffee {
-     protected Coffee decoratedCoffee;
+     protected Coffee simpleCoffee;
 
-    public CoffeeDecorator(Coffee decoratedCoffee) {
-        this.decoratedCoffee = decoratedCoffee;
+    public CoffeeDecorator(Coffee simpleCoffee) {
+        this.simpleCoffee = simpleCoffee;
     }
 
     public double cost(){
-     return    decoratedCoffee.cost();
+     return    simpleCoffee.cost();
     }
     public String ingredients(){
-        return decoratedCoffee.ingredients();
+        return simpleCoffee.ingredients();
     }
 }
