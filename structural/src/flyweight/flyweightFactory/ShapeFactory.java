@@ -15,7 +15,7 @@ public class ShapeFactory {
         if (shape == null) {
             // Create the shape if it doesn't exist
             if ("Circle".equalsIgnoreCase(shapeType)) {
-                shape = new Circle(null); // Create a new Circle object
+                shape = new Circle("Circle"); // Create a new Circle object
                 shapeMap.put(shapeType, shape);
                 System.out.println("A Circle shape is created.");
             } else {
