@@ -1,6 +1,7 @@
 package prototype.concretePrototype;
 
 public class Address {
+
     private String street;
     private String city;
     private String country;
