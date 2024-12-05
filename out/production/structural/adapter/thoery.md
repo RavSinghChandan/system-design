@@ -53,3 +53,25 @@
     8. 🌐 **Web Services:** Adapting RESTful services to SOAP-based services or vice versa.
     9. 🖼️ **Image Format Adapters:** Adapting image libraries to support different formats (JPEG, PNG, TIFF).
     10. 📞 **Telephony Adapters:** Adapting between different telephony services (e.g., VoIP to PSTN).
+
+## 🌟 Structure
+
+```plaintext
++-----------------------+         +-----------------------+
+|      Client Code      |         |   Adaptee (Existing)  |
++-----------------------+         +-----------------------+
+               |                              |
+               v                              v
+         +-----------------------+   +-----------------------+
+         |       Adapter         |<--|      Adaptee Method   |
+         +-----------------------+   +-----------------------+
+                     |
+                     v
+             +-----------------------+
+             |  Target Interface     |
+             +-----------------------+
+                     |
+                     v
+             +-----------------------+
+             |  Adapter Method       |
+             +-----------------------+

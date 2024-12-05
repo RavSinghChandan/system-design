@@ -57,3 +57,28 @@
     8. 🧩 **Authentication Systems:** Adding layers of authentication like two-factor authentication or logging into a basic authentication service.
     9. 🌐 **Web Requests:** Adding different behaviors such as caching, logging, and compression to web requests by decorating the request handler.
     10. 📚 **Document Handling:** Adding new behaviors like encryption, compression, and signing to document objects without altering the original content.
+## 🌟 Structure
+
+```plaintext
++-----------------------------+
+|        Component            |
+| (Defines Common Interface)  |
++-----------------------------+
+               ^
+               |
+    +-----------------------+
+    |       Concrete        |
+    |      Component        |
+    +-----------------------+
+               ^
+               |
+    +-----------------------+
+    |       Decorator       |
+    | (Extends Component)   |
+    +-----------------------+
+               ^
+               |
+    +-----------------------+
+    |   Concrete Decorator  |
+    | (Adds Extra Behavior) |
+    +-----------------------+

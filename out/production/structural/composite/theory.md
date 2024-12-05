@@ -55,3 +55,25 @@
     8. 🏢 **Organization Charts:** Employees, teams, and departments organized in a hierarchical tree structure.
     9. 📚 **Book Collections:** Books, chapters, and sections treated uniformly in libraries or cataloging systems.
     10. 🚗 **Vehicle Hierarchies:** Parts of a car, such as engine, wheels, and components, treated in a uniform way.
+## 🌟 Structure
+
+```plaintext
++-------------------------+
+|        Component        |
++-------------------------+
+               ^
+               |
+    +---------------------+
+    |   Leaf (End Node)   |
+    +---------------------+
+               ^
+               |
+    +---------------------+
+    |    Composite        |
+    | (Holds Components)  |
+    +---------------------+
+               |
+               v
+        +-------------+
+        |   Children   |
+        +-------------+
