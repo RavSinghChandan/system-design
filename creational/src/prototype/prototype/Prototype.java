@@ -1,5 +1,7 @@
 package prototype.prototype;
 
+import prototype.concretePrototype.Person;
+
 public interface Prototype {
-    Prototype clone();
+    Prototype clone(Person person);
 }

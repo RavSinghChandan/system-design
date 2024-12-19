@@ -47,10 +47,10 @@ public class Person implements Prototype {
     }
 
     @Override
-    public Prototype clone() {
+    public Prototype clone(Person person) {
 
         // Create a clone of the address (deep cloning)
 
-        return new Person(this.name,this.age,address);
+        return new Person(person.name,person.age,person.address);
     }
 }
