@@ -1,6 +1,6 @@
 package singleton.client;
 
-import singleton.singleton.Chandan;
+import singleton.chandan.Chandan;
 import singleton.singleton.Singleton;
 
 public class Client {
@@ -9,7 +9,7 @@ public class Client {
         Singleton singleton = Singleton.getSingleton();
         singleton.showSingletonCreated("First singleton creation");
         System.out.println("========================================");
-        // Chandan's Object
+        // 01. Example
         Chandan chandan= Chandan.getChandanObject();
 
     }

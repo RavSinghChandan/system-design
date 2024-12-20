@@ -1,4 +1,4 @@
-package prototype.prototype;
+package prototype.chandan;
 
 public interface PrototypeChandan {
     PrototypeChandan cloneChandan();

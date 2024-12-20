@@ -1,7 +1,4 @@
-package factory.factory;
-
-import factory.concreteCreator.*;
-import factory.creator.Chandan;
+package factory.chandan;
 
 public class ChandanFactory {
 

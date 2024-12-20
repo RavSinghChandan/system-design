@@ -1,8 +1,8 @@
 package factory;
 
-import factory.creator.Chandan;
+import factory.chandan.Chandan;
 import factory.creator.Shape;
-import factory.factory.ChandanFactory;
+import factory.chandan.ChandanFactory;
 import factory.factory.ShapeFactory;
 
 public class Client {

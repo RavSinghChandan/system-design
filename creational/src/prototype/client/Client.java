@@ -1,7 +1,7 @@
 package prototype.client;
 
 import prototype.concretePrototype.Address;
-import prototype.concretePrototype.Chandan;
+import prototype.chandan.Chandan;
 import prototype.concretePrototype.Person;
 
 public class Client {

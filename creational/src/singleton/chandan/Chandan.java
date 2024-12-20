@@ -1,4 +1,4 @@
-package singleton.singleton;
+package singleton.chandan;
 
 public class Chandan {
 

@@ -1,4 +1,4 @@
-package factory.creator;
+package factory.chandan;
 
 public interface Chandan {
     void createChandan();

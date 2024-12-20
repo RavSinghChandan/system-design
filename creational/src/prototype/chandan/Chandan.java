@@ -1,6 +1,4 @@
-package prototype.concretePrototype;
-
-import prototype.prototype.PrototypeChandan;
+package prototype.chandan;
 
 public class Chandan implements PrototypeChandan {
 

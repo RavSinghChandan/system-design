@@ -1,6 +1,4 @@
-package factory.concreteCreator;
-
-import factory.creator.Chandan;
+package factory.chandan;
 
 public class Devotee implements Chandan {
     @Override
