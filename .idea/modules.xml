@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/creational/creational.iml" filepath="$PROJECT_DIR$/creational/creational.iml" />
       <module fileurl="file://$PROJECT_DIR$/behavioural/functional.iml" filepath="$PROJECT_DIR$/behavioural/functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solid-principles/solid-principles.iml" filepath="$PROJECT_DIR$/solid-principles/solid-principles.iml" />
       <module fileurl="file://$PROJECT_DIR$/structural/structural.iml" filepath="$PROJECT_DIR$/structural/structural.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/system-design.iml" filepath="$PROJECT_DIR$/.idea/system-design.iml" />
     </modules>
