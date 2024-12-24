@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/creational/creational.iml" filepath="$PROJECT_DIR$/creational/creational.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-structure-techniques/data-structure-techniques.iml" filepath="$PROJECT_DIR$/data-structure-techniques/data-structure-techniques.iml" />
       <module fileurl="file://$PROJECT_DIR$/behavioural/functional.iml" filepath="$PROJECT_DIR$/behavioural/functional.iml" />
       <module fileurl="file://$PROJECT_DIR$/solid-principles/solid-principles.iml" filepath="$PROJECT_DIR$/solid-principles/solid-principles.iml" />
       <module fileurl="file://$PROJECT_DIR$/structural/structural.iml" filepath="$PROJECT_DIR$/structural/structural.iml" />
