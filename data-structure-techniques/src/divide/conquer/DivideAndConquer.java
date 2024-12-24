@@ -25,3 +25,30 @@ public class DivideAndConquer {
         return Math.max(left, right); // Example: Return the maximum of two results
     }
 }
+/*
+* Brute Force
+Divide and Conquer
+Greedy Algorithm
+Dynamic Programming (DP)
+Backtracking
+Sliding Window
+Two Pointers
+Recursion
+Hashing
+Disjoint Set Union (DSU) / Union-Find
+Graph Traversal
+Bit Manipulation
+Heap / Priority Queue
+Segment Tree
+Fenwick Tree (Binary Indexed Tree)
+Trie (Prefix Tree)
+Suffix Tree
+Bloom Filter
+Topological Sorting
+Sliding Window
+String Matching Algorithms (KMP, Rabin-Karp, etc.)
+Kadane’s Algorithm
+Matrix Manipulation
+Sparse Tables
+Skip Lists
+Van Emde Boas Tree*/
