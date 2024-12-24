@@ -26,29 +26,29 @@ public class DivideAndConquer {
     }
 }
 /*
-* Brute Force
-Divide and Conquer
-Greedy Algorithm
-Dynamic Programming (DP)
-Backtracking
-Sliding Window
-Two Pointers
-Recursion
-Hashing
-Disjoint Set Union (DSU) / Union-Find
-Graph Traversal
-Bit Manipulation
-Heap / Priority Queue
-Segment Tree
-Fenwick Tree (Binary Indexed Tree)
-Trie (Prefix Tree)
-Suffix Tree
-Bloom Filter
-Topological Sorting
-Sliding Window
-String Matching Algorithms (KMP, Rabin-Karp, etc.)
-Kadane’s Algorithm
-Matrix Manipulation
-Sparse Tables
-Skip Lists
-Van Emde Boas Tree*/
+
+- Brute Force
+- Divide and Conquer
+- Greedy Algorithm
+- Dynamic Programming (DP)
+- Backtracking
+- Sliding Window
+- Two Pointers
+- Recursion
+- Hashing
+- Disjoint Set Union (DSU) / Union-Find
+- Graph Traversal
+- Bit Manipulation
+- Heap / Priority Queue
+- Segment Tree
+- Fenwick Tree (Binary Indexed Tree)
+- Trie (Prefix Tree)
+- Suffix Tree
+- Bloom Filter
+- Topological Sorting
+- Kadane’s Algorithm
+- Matrix Manipulation
+- Sparse Tables
+- Skip Lists
+
+*/
