@@ -1,6 +1,4 @@
-package webapps;
-
-import webapps.urlshort.URLShorteningService;
+package webapps.urlshort;
 
 public class Main {
     public static void main(String[] args) {
