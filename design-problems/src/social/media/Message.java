@@ -3,6 +3,7 @@ package social.media;
 import java.util.Date;
 
 public class Message {
+
     private String messageId;
     private String senderId;
     private String receiverId;
