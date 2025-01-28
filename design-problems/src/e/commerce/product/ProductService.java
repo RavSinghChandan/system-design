@@ -12,6 +12,7 @@ public class ProductService {
     }
 
     public List<Product> searchProduct(String keyword) {
+
         List<Product> result = new ArrayList<>();
         for (Product product : products) {
             if (product.getName().toLowerCase().contains(keyword.toLowerCase())) {

@@ -1,6 +1,7 @@
 package e.commerce.payment;
 
 public class Payment {
+
     private String paymentId;
     private double amount;
 

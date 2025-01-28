@@ -1,6 +1,7 @@
 package e.commerce.inventory;
 
 public class InventoryItem {
+
     private String name;
     private int quantity;
 

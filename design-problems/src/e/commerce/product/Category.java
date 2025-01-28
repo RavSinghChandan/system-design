@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Category {
+
     private String name;
     private List<Product> products;
 

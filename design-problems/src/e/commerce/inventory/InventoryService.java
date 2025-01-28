@@ -13,7 +13,9 @@ public class InventoryService {
     }
 
     public void updateQuantity(String itemName, int quantity) {
+
         InventoryItem item = inventory.get(itemName);
+
         if (item != null) {
             item.setQuantity(quantity);
             System.out.println("Updated quantity for " + itemName + ": " + quantity);
