@@ -1,4 +1,4 @@
-package social.media;
+package social.media.follow;
 
 import java.util.*;
 

@@ -1,4 +1,6 @@
-package social.media;
+package social.media.post;
+
+import social.media.comment.Comment;
 
 import java.util.*;
 

@@ -1,5 +1,14 @@
 package social.media;
 
+import social.media.follow.FollowService;
+import social.media.message.Message;
+import social.media.message.MessageService;
+import social.media.notification.NotificationService;
+import social.media.post.Post;
+import social.media.post.PostService;
+import social.media.user.User;
+import social.media.user.UserService;
+
 import java.util.*;
 
 public class Main {

@@ -1,4 +1,4 @@
-package social.media;
+package social.media.comment;
 
 public class Comment {
     private String userId;

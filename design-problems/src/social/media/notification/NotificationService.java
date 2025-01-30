@@ -1,4 +1,4 @@
-package social.media;
+package social.media.notification;
 
 import java.util.*;
 
