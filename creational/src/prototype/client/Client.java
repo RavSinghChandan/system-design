@@ -7,17 +7,17 @@ import prototype.concretePrototype.Person;
 public class Client {
     public static void main(String[] args) {
         // Create an Address object
-        Address address = new Address("123 Main St", "New York", "USA");
+        Address address = new Address("IIT Bombay", "Mumbai", "India");
 
         // Create a Person object with the Address
-        Person originalPerson = new Person("John Doe", 30, address);
+        Person originalPerson = new Person("Rav  Singh", 28, address);
 
         // Clone the Person object
         Person clonedPerson = (Person) originalPerson.clone(originalPerson);
 
         // Modify the cloned object's name and address
-        clonedPerson.setName("Jane Smith");
-        clonedPerson.getAddress().setStreet("456 Elm St");
+        clonedPerson.setName("IIT Baba");
+        clonedPerson.getAddress().setStreet("Kumbh");
 
         // Display both original and cloned Person objects
         System.out.println("Original Person: " + originalPerson+" Hash code is : "+originalPerson.hashCode());

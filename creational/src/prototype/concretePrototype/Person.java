@@ -3,6 +3,7 @@ package prototype.concretePrototype;
 import prototype.prototype.Prototype;
 
 public class Person implements Prototype {
+
     private String name;
     private int age;
     private Address address;
