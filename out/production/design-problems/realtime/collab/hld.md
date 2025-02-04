@@ -1,41 +1,42 @@
-# 🌐 Social Media Application
+# 🌐 Real-Time Collaboration Tool
 
 ## 🔎 Introduction
-A **Social Media Application** allows users to connect, share content, and engage with each other through posts, comments, likes, and messaging. Users can create profiles, follow others, and participate in a community-based experience.
+A **Real-Time Collaboration Tool** allows multiple users to simultaneously work on shared documents. It enables features like real-time editing, version control, user roles, and notifications, making it a collaborative platform for document creation and management.
 
 ---
 
 ## 🏗️ Features
 
-1. **📝 User Profiles**: Users can create and manage their profiles with information such as username, bio, and profile picture.
-2. **📢 Posts**: Users can create, edit, and delete posts with text, images, or videos.
-3. **❤️ Likes and Comments**: Users can like or comment on posts.
-4. **🔄 Follow and Unfollow**: Users can follow or unfollow other users.
-5. **💬 Messaging**: Users can send private messages to others.
-6. **📊 Analytics**: Users can see the number of likes, comments, shares, and followers on their posts.
-7. **🔔 Notifications**: Users receive notifications for interactions like new followers, likes, comments, and messages.
+1. **📝 User Management**: Users can register, log in, and manage their profiles with roles such as admin, editor, and viewer.
+2. **📄 Document Management**: Users can create, edit, and manage documents, including text and multimedia content.
+3. **❤️ Real-Time Editing**: Multiple users can work on a document at the same time, with changes being reflected in real-time.
+4. **🔄 Version Control**: Tracks changes to documents, allowing users to view and revert to previous versions.
+5. **💬 Comments and Annotations**: Users can comment on sections of a document for collaboration.
+6. **🔔 Notifications**: Users receive notifications for document updates, edits, and comments.
+7. **🔒 Permissions & Access Control**: Role-based access control to manage who can view, edit, or comment on documents.
 
 ---
 
 ## 🖥️ Tech Stack
 
-- **Frontend**: React.js or Angular for building an interactive user interface.
-- **Backend**: Node.js, Python (Flask/Django), or Java Spring Boot for handling server-side operations.
+- **Frontend**: Angular for building dynamic and responsive user interfaces.
+- **Backend**: Spring Boot for handling backend operations, with support for real-time communication.
 - **Database**:
-    - Relational: MySQL/PostgreSQL for structured data like user profiles and posts.
-    - NoSQL: MongoDB for scalable storage of posts and interactions.
-- **Cloud**: AWS, GCP, or Azure for cloud hosting and scalability.
-- **API**: REST or GraphQL for communication between frontend and backend.
-- **Authentication**: JWT or OAuth for user authentication and authorization.
-- **Storage**: AWS S3 or Google Cloud Storage for image and video hosting.
+    - SQL (PostgreSQL) for structured document and user data.
+    - NoSQL (MongoDB) for storing real-time updates and document changes.
+- **Cloud**: AWS or Google Cloud for hosting and scalability.
+- **API**: REST APIs for CRUD operations and WebSockets for real-time communication.
+- **Authentication**: JWT for secure user authentication and authorization.
+- **Version Control**: Git-like versioning for document history.
+- **Notifications**: WebSockets for real-time notifications, email for alerts.
 
 ---
 
 ## 🛠️ Steps to Build
 
 ### 1. **Requirement Analysis**
-- Identify core features like user profiles, posts, comments, and messaging.
-- Define non-functional requirements such as scalability, security, and performance.
+- Identify core features like user authentication, document creation, real-time collaboration, and version control.
+- Define scalability requirements to support a growing number of users and documents.
 
 ### 2. **System Design**
 
@@ -44,166 +45,187 @@ A **Social Media Application** allows users to connect, share content, and engag
 ```plaintext
 Table: Users
 ---------------------------------------
-| id (PK) | username | bio   | profile_picture |
-|--------|----------|-------|-----------------|
-|   1    | john_doe | bio   | image.jpg       |
+| id (PK) | username | password | role    |
+|---------|----------|----------|---------|
+|   1     | john_doe | secret   | admin   |
 ---------------------------------------
 
-Table: Posts
---------------------------------------
-| id (PK) | user_id (FK) | content | media_url  |
-|---------|--------------|---------|------------|
-|    1    |      1       | text    | image.jpg  |
---------------------------------------
+Table: Documents
+------------------------------------------
+| id (PK) | title    | user_id (FK) | content |
+|---------|----------|--------------|---------|
+|   1     | Doc 1    |      1       | text... |
+------------------------------------------
+
+Table: DocumentVersions
+--------------------------------------------------------
+| id (PK) | document_id (FK) | version_number | content |
+|---------|------------------|----------------|---------|
+|   1     |        1         |       1        | text... |
+--------------------------------------------------------
 
 Table: Comments
-----------------------------------------
-| id (PK) | post_id (FK) | user_id (FK) | comment_text |
-|---------|--------------|--------------|--------------|
-|    1    |      1       |      1       | Nice post!   |
-----------------------------------------
-
-Table: Followers
-----------------------------------------
-| follower_id (FK) | followed_id (FK) |
-|------------------|------------------|
-|        1         |        2         |
-----------------------------------------
-```
-
-#### **API Endpoints**:
-
-```plaintext
+------------------------------------------------------
+| id (PK) | document_id (FK) | user_id (FK) | text   |
+|---------|------------------|--------------|--------|
+|   1     |        1         |      1       | Nice!  |
+------------------------------------------------------
+API Endpoints:
 POST /register
-Body: {
+Request Body:
+
+json
+Copy
+Edit
+{
   "username": "john_doe",
   "password": "securepassword",
-  "email": "john.doe@example.com"
+  "role": "editor"
 }
-Response: {
+Response:
+
+json
+Copy
+Edit
+{
   "message": "Registration successful"
 }
-
 POST /login
-Body: {
+Request Body:
+
+json
+Copy
+Edit
+{
   "username": "john_doe",
   "password": "securepassword"
 }
-Response: {
+Response:
+
+json
+Copy
+Edit
+{
   "token": "jwt_token"
 }
+POST /document
+Request Body:
 
-POST /post
-Body: {
-  "content": "This is my first post",
-  "media_url": "https://example.com/image.jpg"
+json
+Copy
+Edit
+{
+  "title": "Collaborative Document",
+  "content": "Initial content"
 }
-Response: {
-  "message": "Post created successfully"
-}
+Response:
 
-POST /like
-Body: {
-  "post_id": 1
+json
+Copy
+Edit
+{
+  "message": "Document created successfully"
 }
-Response: {
-  "message": "Post liked successfully"
-}
+POST /edit
+Request Body:
 
+json
+Copy
+Edit
+{
+  "document_id": 1,
+  "content": "Updated content"
+}
+Response:
+
+json
+Copy
+Edit
+{
+  "message": "Document edited successfully"
+}
+POST /comment
+Request Body:
+
+json
+Copy
+Edit
+{
+  "document_id": 1,
+  "text": "Great work!"
+}
+Response:
+
+json
+Copy
+Edit
+{
+  "message": "Comment added"
+}
 POST /follow
-Body: {
+Request Body:
+
+json
+Copy
+Edit
+{
   "followed_id": 2
 }
-Response: {
+Response:
+
+json
+Copy
+Edit
+{
   "message": "User followed successfully"
 }
-```
 
----
-
-### 3. **Component Diagram**
-
-```plaintext
 +----------------------+
 |       User           |
 +----------------------+
 | + register()         |
 | + login()            |
-| + createProfile()    |
-| + followUser()       |
+| + createDocument()   |
+| + editDocument()     |
+| + addComment()       |
 +----------------------+
         |
         v
 +----------------------+
-|       Post           |
+|     Document         |
 +----------------------+
-| + createPost()       |
-| + getFeed()          |
-| + likePost()         |
+| + create()           |
+| + edit()             |
+| + getContent()       |
+| + getVersions()      |
 +----------------------+
         |
         v
 +----------------------+
-|      Comment         |
+|    Comment           |
 +----------------------+
 | + addComment()       |
 +----------------------+
-```
 
----
-
-### 4. **Sequence Diagram**
-
-#### **User Registration**:
-
-```plaintext
-User -> Frontend: Create account
-Frontend -> Backend: Send registration data
-Backend -> Database: Store user data
-Database -> Backend: Confirmation
-Backend -> Frontend: Send success message
-```
-
-#### **Post Creation**:
-
-```plaintext
-User -> Frontend: Create post
-Frontend -> Backend: Send post data
-Backend -> Database: Store post data
-Database -> Backend: Confirmation
-Backend -> Frontend: Send success message
-```
-
----
-
-### 5. **Schema Relationships**
-
-```plaintext
-+------------------+          +-------------------+
-|      User        |          |      Post         |
-+------------------+          +-------------------+
-| id (PK)          |          | id (PK)           |
-| username         |          | user_id (FK)      |
-| email            |          | content           |
-| password         |          | media_url         |
-+------------------+          +-------------------+
++------------------+          +---------------------+
+|      User        |          |      Document       |
++------------------+          +---------------------+
+| id (PK)          |          | id (PK)             |
+| username         |          | title               |
+| password         |          | content             |
+| role             |          | user_id (FK)        |
++------------------+          +---------------------+
         |                             |
         v                             v
-+-------------------+          +--------------------+
-|    Followers      |          |    Comments        |
-+-------------------+          +--------------------+
-| follower_id (FK)  |          | id (PK)            |
-| followed_id (FK)  |          | post_id (FK)       |
-+-------------------+          | user_id (FK)       |
-                               | comment_text       |
-                               +--------------------+
-```
++-------------------+          +---------------------+
+| DocumentVersions  |          |     Comments        |
++-------------------+          +---------------------+
+| id (PK)           |          | id (PK)             |
+| document_id (FK)  |          | document_id (FK)    |
+| version_number    |          | user_id (FK)        |
+| content           |          | text                |
++-------------------+          +---------------------+
 
----
-
-### 6. **Folder Structure**
-
-```plaintext
 project-root/
 ├── frontend/
 │   ├── src/
