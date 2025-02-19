@@ -1,6 +1,4 @@
-package factory.factory;
-
-import factory.loan.Loan;
+package factory.loan;
 
 public class Client {
     public static void main(String[] args) {

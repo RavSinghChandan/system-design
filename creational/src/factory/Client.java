@@ -8,14 +8,14 @@ import factory.factory.ShapeFactory;
 public class Client {
     public static void main(String[] args) {
 
-        ShapeFactory shapeFactory = new ShapeFactory();
-        Shape circle = shapeFactory.getShape("Circle");
+        ShapeFactory factory = new ShapeFactory();
+        Shape circle = factory.getShape("Circle");
         circle.draw();
 
-        Shape rectangle = shapeFactory.getShape("Rectangle");
+        Shape rectangle = factory.getShape("Rectangle");
         rectangle.draw();
 
-        Shape wrongShape = shapeFactory.getShape("Spelling Error");
+        Shape wrongShape = factory.getShape("Spelling Error");
         //wrongShape.draw();
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++");

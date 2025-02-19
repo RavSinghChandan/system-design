@@ -1,4 +1,5 @@
 package factory.loan;
 
-public class Loan {
+public interface Loan {
+    public void getLoanDetails();
 }
