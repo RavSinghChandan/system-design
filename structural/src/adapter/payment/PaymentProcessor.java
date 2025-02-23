@@ -1,7 +1,4 @@
-package adapter.client;
-
-import adapter.adaptee.PayPal;
-import adapter.adapter.PaypalPayment;
+package adapter.payment;
 
 public class PaymentProcessor {
     public static void main(String[] args) {

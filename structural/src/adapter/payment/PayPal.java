@@ -1,4 +1,4 @@
-package adapter.adaptee;
+package adapter.payment;
 
 public class PayPal {
     public void makePayment(String email, double amount){

@@ -1,7 +1,4 @@
-package adapter.adapter;
-
-import adapter.adaptee.PayPal;
-import adapter.target.PaymentGateway;
+package adapter.payment;
 
 public class PaypalPayment implements PaymentGateway {
 
