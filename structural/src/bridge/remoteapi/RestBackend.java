@@ -3,6 +3,6 @@ package bridge.remoteapi;
 public class RestBackend implements BackendImplementation{
     @Override
     public String fetchData() {
-        return "Data fetched from REST Back-end ";
+        return "Data fetched from REST Back-end database";
     }
 }
