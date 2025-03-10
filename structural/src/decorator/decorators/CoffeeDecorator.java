@@ -3,6 +3,7 @@ package decorator.decorators;
 import decorator.component.Coffee;
 
 public abstract class CoffeeDecorator implements Coffee {
+
      protected Coffee simpleCoffee;
 
     public CoffeeDecorator(Coffee simpleCoffee) {
