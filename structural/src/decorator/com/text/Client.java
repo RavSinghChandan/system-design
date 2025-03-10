@@ -3,14 +3,14 @@ package decorator.com.text;
 public class Client {
     public static void main(String[] args) {
 
-        TextComponent text = new PlainText("Hello, World!");
+        TextComponent parent = new PlainText("Hello, World!");
 
         // Applying decorators
-        TextComponent boldText = new BoldText(text);
+        TextComponent boldTextFeature1 = new BoldText(parent);
 
-        System.out.println(boldText.render());
-        TextComponent italicText = new ItalicText(boldText);
+        System.out.println(boldTextFeature1.render());
+        TextComponent italicTextFeature2 = new ItalicText(boldTextFeature1);
 
-        System.out.println( italicText.render());
+        System.out.println( italicTextFeature2.render());
     }
 }
