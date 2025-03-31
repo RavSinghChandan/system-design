@@ -97,3 +97,17 @@ The **Singleton Design Pattern** is a creational design pattern that ensures a c
   +----------------------------+
   | Private Static Instance    |
   +----------------------------+
+
+
+ONE WORD TO EACH : 
+
+Singleton → Uniqueness (Only one instance exists.)
+
+Prototype → Cloning (Creates a copy of an existing object.)
+
+Factory → Creation (Encapsulates object creation logic.)
+
+Abstract Factory → Families (Creates related objects together.)
+
+Builder → Stepwise (Constructs an object step by step.)
+

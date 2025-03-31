@@ -1,28 +1,46 @@
 package builder;
 
-import builder.builder.Builder;
-import builder.chandan.Chandan;
-import builder.chandan.ConcreteChandanBuilder;
-import builder.concreteBuilder.ConcreteBuilder;
-import builder.director.Director;
-import builder.product.Product;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Client {
+
     public static void main(String[] args) {
-        Builder builder = new ConcreteBuilder();
-        Director director = new Director(builder);
+        // Food =
+      countDistinctSubString("FOOD");
+// bag = ""
 
-        director.construct();
-        Product product = builder.getResult();
+    }
+    private static void countDistinctSubString(String s){
+        int n = s.length();
+        Map<String,Integer> map = new HashMap<>();
+        String bag;
+        int sum = 0;
+        int count;
+        // String - stream - forEach()- distinctCount(String string)- sum :
+        for(int i=0;i<n ; i++){
+            count=0;
+             bag = "";
+            for(int j=i+1;j<n;j++){
+                bag = s.substring(i,j);
+                count++;
+            }
+           // System.out.println(bag);
+            map.put(bag,count);
+            sum +=count;
+        }
+        System.out.println(sum);
+        // employee - e.name  = duplicate - delete duplicates
+        /*
+        * select name, id from employee;
+        *
+        * DELETE name FROM employee as e WHERE e1.name = e2.name;
+        *
+        *
+        *
+        *
+        *
+        * */
 
-        System.out.println("Constructed Product: " + product);
-        System.out.println("=================Chandan ===========");
-
-        builder.chandan.Builder builder1 = new ConcreteChandanBuilder();
-        builder.chandan.Director director1 = new builder.chandan.Director(builder1);
-
-        director1.construct();
-        Chandan chandanProduct = builder1.getResult();
-        System.out.println("Constructed Chandan as Product : " + chandanProduct);
     }
 }
