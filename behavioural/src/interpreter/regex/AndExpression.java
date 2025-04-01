@@ -1,7 +1,4 @@
-package interpreter.expression;
-
-import interpreter.abstractExpression.Expression;
-import interpreter.context.Context;
+package interpreter.regex;
 
 public class AndExpression implements Expression {
     private Expression expr1;
@@ -13,8 +10,7 @@ public class AndExpression implements Expression {
     }
 
     @Override
-    public boolean interpret(Context context) {
-
+    public boolean interpret(String context) {
         return expr1.interpret(context) && expr2.interpret(context);
     }
 }
